@@ -1,0 +1,201 @@
+<main class="page-shell">
+  <section class="topbar">
+    <p class="brand-mark">ARAVINTH / NODE.JS</p>
+    <div class="topbar-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Backend Portfolio</p>
+      <div class="hero-title-wrap">
+        <h1>{{profile.name}}</h1>
+        <p class="hero-badge">{{profile.targetRole}}</p>
+      </div>
+      <h2>{{profile.title}}</h2>
+      <p class="tagline">{{profile.tagline}}</p>
+      <p class="intro">{{profile.intro}}</p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{profile.resumePath}}" target="_blank" rel="noreferrer">View Resume</a>
+        <a class="button button-secondary" href="mailto:{{profile.email}}">Contact Me</a>
+      </div>
+
+      <div class="hero-mini-grid">
+        <article class="mini-panel">
+          <span>Primary Focus</span>
+          <strong>API Engineering</strong>
+        </article>
+        <article class="mini-panel">
+          <span>Strong With</span>
+          <strong>Node.js, Express, MongoDB</strong>
+        </article>
+        <article class="mini-panel">
+          <span>Domain</span>
+          <strong>ERP Procurement Systems</strong>
+        </article>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="hero-card hero-card-dark">
+        <p class="card-label">Quick Info</p>
+        <ul class="contact-list">
+          <li><span>Location</span><strong>{{profile.location}}</strong></li>
+          <li><span>Email</span><strong>{{profile.email}}</strong></li>
+          <li><span>Phone</span><strong>{{profile.phone}}</strong></li>
+        </ul>
+      </div>
+
+      <div class="hero-card hero-card-light">
+        <p class="card-label">What Sets Me Apart</p>
+        <p class="side-copy">Production backend work, SAP-linked integrations, and clean procurement workflow APIs built for real business operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    {{#each profile.stats}}
+      <article class="stat-card">
+        <strong>{{this.value}}</strong>
+        <span>{{this.label}}</span>
+      </article>
+    {{/each}}
+  </section>
+
+  <section class="panel recruiter-panel">
+    <div class="panel-heading">
+      <p class="eyebrow">Quick Summary</p>
+      <h3>For HR And Recruiters</h3>
+    </div>
+    <p class="recruiter-summary">{{profile.shortSummary}}</p>
+    <div class="recruiter-grid">
+      {{#each profile.recruiterPoints}}
+        <article class="recruiter-card">
+          <span class="recruiter-dot"></span>
+          <p>{{this}}</p>
+        </article>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">Strengths</p>
+        <h3>What I Bring</h3>
+      </div>
+      <ul class="bullet-list">
+        {{#each profile.highlights}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </article>
+
+    <article class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">Skills</p>
+        <h3>Technical Stack</h3>
+      </div>
+      <div class="chip-wrap">
+        {{#each profile.skills}}
+          <span class="chip">{{this}}</span>
+        {{/each}}
+      </div>
+    </article>
+  </section>
+
+  <section class="spotlight-band">
+    <p>Node.js</p>
+    <p>Express.js</p>
+    <p>MongoDB</p>
+    <p>MySQL</p>
+    <p>SAP Integration</p>
+    <p>JWT</p>
+    <p>REST APIs</p>
+    <p>Backend Performance</p>
+  </section>
+
+  <section class="panel" id="experience">
+    <div class="panel-heading">
+      <p class="eyebrow">Experience</p>
+      <h3>Professional Snapshot</h3>
+    </div>
+    <div class="timeline">
+      {{#each profile.experience}}
+        <article class="timeline-item">
+          <div class="timeline-top">
+            <div>
+              <h4>{{this.role}}</h4>
+              <p>{{this.company}}</p>
+            </div>
+            <span>{{this.period}}</span>
+          </div>
+          <ul class="bullet-list">
+            {{#each this.points}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </article>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel">
+      <div class="panel-heading" id="projects">
+        <p class="eyebrow">Projects</p>
+        <h3>Featured Work</h3>
+      </div>
+      <div class="project-list">
+        {{#each profile.projects}}
+          <article class="project-card">
+            <h4>{{this.name}}</h4>
+            <p>{{this.description}}</p>
+            <small>{{this.stack}}</small>
+          </article>
+        {{/each}}
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="panel-heading" id="education">
+        <p class="eyebrow">Education</p>
+        <h3>Academic Details</h3>
+      </div>
+      <div class="education-list">
+        {{#each profile.education}}
+          <article class="education-item">
+            <h4>{{this.degree}}</h4>
+            <p>{{this.institution}}</p>
+            <span>{{this.period}}</span>
+          </article>
+        {{/each}}
+      </div>
+    </article>
+  </section>
+
+  <section class="cta-panel">
+    <div>
+      <p class="eyebrow">Let's Build</p>
+      <h3>Looking for a backend developer who can own APIs and integrations?</h3>
+      <p>I'm ready to contribute to Node.js products, internal platforms, and enterprise workflow systems.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="button button-primary" href="mailto:{{profile.email}}">Hire Me</a>
+      <a class="button button-secondary" href="{{profile.resumePath}}" target="_blank" rel="noreferrer">Download Resume</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; {{year}} {{profile.name}}</p>
+    <div class="footer-links">
+      {{#each profile.links}}
+        <a href="{{this.href}}" target="_blank" rel="noreferrer">{{this.label}}</a>
+      {{/each}}
+    </div>
+  </footer>
+</main>

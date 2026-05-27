@@ -1,0 +1,19 @@
+{
+  "name": "aravinth-nodejs-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Node.js backend developer portfolio for J. Aravinth built with Express and Handlebars",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "J. Aravinth",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "pdf-parse": "^2.4.5"
+  }
+}
