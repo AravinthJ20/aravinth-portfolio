@@ -4,7 +4,8 @@ const { engine } = require("express-handlebars");
 const profile = require("./data/profile");
 
 const app = express();
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT
+
 
 app.engine(
   "handlebars",
